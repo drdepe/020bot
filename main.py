@@ -40,6 +40,7 @@ def calc1(update, context):
   update.message.reply_text("جاري ارسال شيتات الحسبان 🗂")
   for i in range(1,10):
     context.bot.sendDocument(update.effective_chat.id , document=open(f"./sheets/calc1/calc{i}.pdf" , 'rb'))
+
 def linear1(update, context):
  update.message.reply_text("جاري ارسال شيتات الجبر 🗂")
  for i in range(1,10):
@@ -49,6 +50,7 @@ def stats1(update, context):
     update.message.reply_text("جاري ارسال شيتات الاحصاء 🗂")
     for i in range(1,10):
      context.bot.sendDocument(update.effective_chat.id , document=open(f"./sheets/stats1/Statistics_lecture{i}.pdf" , 'rb'))
+
 def cs1(update, context):
     update.message.reply_text("جاري ارسال شيتات الحاسوب 🗂")
     for i in range(1,11):
@@ -67,6 +69,7 @@ def main():
     dp.add_handler(CommandHandler("linear1", linear1))
     dp.add_handler(CommandHandler("cs1", cs1))
     dp.add_handler(MessageHandler(Filters.text, handle_message))
+    
     dp.add_error_handler(error)
     updater.start_polling()
     updater.idle()
