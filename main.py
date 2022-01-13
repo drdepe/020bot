@@ -7,7 +7,24 @@ import responses as r
 print("Bot is running ")
 
 def start_command(update, context):
-    update.message.reply_text("Say something .")
+
+    msg = """
+#      __  ____   __        
+#    /   \(_ __ \ /   \      
+#    (  0 )/ __/(  0 )    
+#    \__/(____) \__/       
+                          v1.0
+                   
+
+⭕️ Commands:-
+
+/calc1  : شيتات الحسبان سمستر 1
+/stats1  : شيتات الاحصاء سمستر 1
+/linear1 : شيتات الجبر سمستر 1
+/cs1     : شيتات الحاسوب سمستر 1
+    """
+    update.message.reply_text(msg)
+
 def helpme(update , context):
 
     msg = """
